@@ -1,14 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using API.Data;
 using API.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using API.DTOs;
 using AutoMapper;
-using System.Security.Claims;
 using API.Extensions;
 using API.Entities;
 using API.Helpers;
