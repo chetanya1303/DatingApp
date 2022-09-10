@@ -29,7 +29,6 @@ import { UserManagementComponent } from './admin/user-management/user-management
 import { PhotoManagementComponent } from './admin/photo-management/photo-management.component';
 import { RoleModalComponent } from './modals/role-modal/role-modal.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +59,7 @@ import { RoleModalComponent } from './modals/role-modal/role-modal.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
