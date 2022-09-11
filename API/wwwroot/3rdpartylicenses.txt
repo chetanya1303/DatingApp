@@ -156,6 +156,9 @@ SOFTWARE.
 
 ngx-bootstrap/datepicker
 
+ngx-spinner
+MIT
+
 ngx-timeago
 MIT
 
