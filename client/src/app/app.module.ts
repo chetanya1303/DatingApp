@@ -29,6 +29,7 @@ import { UserManagementComponent } from './admin/user-management/user-management
 import { PhotoManagementComponent } from './admin/photo-management/photo-management.component';
 import { RoleModalComponent } from './modals/role-modal/role-modal.component';
 import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.c
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    NgxSpinnerModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
