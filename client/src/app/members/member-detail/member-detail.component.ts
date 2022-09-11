@@ -17,11 +17,11 @@ import { PresenceService } from 'src/app/_services/presence.service';
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent implements OnInit,OnDestroy {
-  @ViewChild('memberTabs') memberTabs: TabsetComponent
+  @ViewChild('memberTabs',{static: true}) memberTabs: TabsetComponent;
   member: Member;
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
-  activeTab :TabDirective;
+  activeTab : TabDirective;
   messages: Message[] = [];
   user: User;
 
@@ -38,7 +38,7 @@ export class MemberDetailComponent implements OnInit,OnDestroy {
     });
 
     this.route.queryParams.subscribe(params => {
-      params.tab? this.selectTab(params.tab): this.selectTab(0);
+      params.tab ? this.selectTab(params.tab) : this.selectTab(0);
     });
 
     this.galleryOptions = [
