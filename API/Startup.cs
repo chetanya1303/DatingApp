@@ -54,7 +54,7 @@ namespace API
 
             app.UseDefaultFiles();
 
-            app.UseStaticFiles();
+            app.UseStaticFiles();            
 
             app.UseEndpoints(endpoints =>
             {
