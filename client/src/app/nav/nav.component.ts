@@ -20,9 +20,17 @@ export class NavComponent implements OnInit {
   }
 
   login(){
-    this.accoutService.login(this.model).subscribe(response => {
-     this.router.navigateByUrl('/members');
-    })
+    if(!this.model.username) {
+      this.toastr.error("Username is required.");
+    }
+    else if(!this.model.password) {
+      this.toastr.error("Password is required.");
+    }
+    else{
+      this.accoutService.login(this.model).subscribe(response => {
+        this.router.navigateByUrl('/members');
+       })
+    }   
   }
   logout(){
     this.accoutService.logout();
